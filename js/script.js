@@ -52,17 +52,19 @@ for (let i = 0; i < peopleArray.length; i++) {
 
     // Creo il Template
     const cardToPrint = `
-    <div class="team-card">
-        <div class="card-image">
-            <img
-                src="img/wayne-barnett-founder-ceo.jpg"
-                alt="Wayne Barnett"
-            />
+        <div class="team-card">
+            <div class="card-image">
+                <img
+                    src="${thisPerson.picture}"
+                    alt="${thisPerson.name}"
+                />
+            </div>
+            <div class="card-text">
+                <h3>${thisPerson.name}</h3>
+                <p>${thisPerson.role}</p>
+            </div>
         </div>
-        <div class="card-text">
-            <h3>[NOME]</h3>
-            <p>[RUOLO]</p>
-        </div>
-  </div>
     `
+    // Appendo le cards a cardsContainer
+    cardsContainer.innerHTML += cardToPrint
 }
