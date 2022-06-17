@@ -13,32 +13,56 @@ const peopleArray = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        picture: 'wayne-barnett-founder-ceo.jpg'
+        picture: 'img/wayne-barnett-founder-ceo.jpg'
     },
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        picture: 'angela-caroll-chief-editor.jpg'
+        picture: 'img/angela-caroll-chief-editor.jpg'
     },
     {
         name: 'Walter Gordon',
         role: 'Office Manager',
-        picture: 'walter-gordon-office-manager.jpg'
+        picture: 'img/walter-gordon-office-manager.jpg'
     },
     {
         name: 'Angela Lopez',
         role: 'Social Media Manager',
-        picture: 'angela-lopez-social-media-manager.jpg'
+        picture: 'img/angela-lopez-social-media-manager.jpg'
     },
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        picture: 'scott-estrada-developer.jpg'
+        picture: 'img/scott-estrada-developer.jpg'
     },
     {
         name: 'Barbara Ramos',
         role: 'Graphic Designer',
-        picture: 'barbara-ramos-graphic-designer.jpg'
+        picture: 'img/barbara-ramos-graphic-designer.jpg'
     }
-    
+
 ]
+
+// Seleziono l'elemento HTML al quale appenderò le cards
+const cardsContainer = document.querySelector('.team-container')
+
+// Ciclo for per scorrere l'array e creo le cards
+for (let i = 0; i < peopleArray.length; i++) {
+    const thisPerson = peopleArray[i]
+
+    // Creo il Template
+    const cardToPrint = `
+    <div class="team-card">
+        <div class="card-image">
+            <img
+                src="img/wayne-barnett-founder-ceo.jpg"
+                alt="Wayne Barnett"
+            />
+        </div>
+        <div class="card-text">
+            <h3>[NOME]</h3>
+            <p>[RUOLO]</p>
+        </div>
+  </div>
+    `
+}
